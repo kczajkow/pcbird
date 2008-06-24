@@ -1,0 +1,1 @@
+cmd_/home/caladan/isr/pcbird-driver/uio_driver/pcbird_uio.ko := ld -r -m elf_x86_64  --build-id -o /home/caladan/isr/pcbird-driver/uio_driver/pcbird_uio.ko /home/caladan/isr/pcbird-driver/uio_driver/pcbird_uio.o /home/caladan/isr/pcbird-driver/uio_driver/pcbird_uio.mod.o

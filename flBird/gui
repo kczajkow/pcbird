@@ -1,0 +1,78 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0107 
+header_name {.h} 
+code_name {.cxx}
+decl {\#include <FL/fl_ask.H>} {selected
+} 
+
+decl {\#include "flbird.h"} {} 
+
+decl {\#include "birdclient.h"} {} 
+
+decl {\#include <FL/Fl_Text_Buffer.H>} {} 
+
+Function {make_window()} {open
+} {
+  Fl_Window mainwnd {
+    label flBird open
+    xywh {340 178 655 460} type Double visible
+  } {
+    Fl_Input hostbox {
+      label Hostname
+      xywh {90 15 140 25}
+      code0 {hostbox->value("192.168.18.75");}
+    }
+    Fl_Text_Display resultbox {
+      xywh {5 94 645 355}
+      code0 {Fl_Text_Buffer* tb = new Fl_Text_Buffer();}
+      code1 {resultbox->buffer(tb);}
+    }
+    Fl_Spinner portbox {
+      label Port
+      xywh {270 15 70 25}
+      code0 {portbox->value(DEFAULT_PORT);}
+      code1 {portbox->type(FL_INT_INPUT);}
+      code2 {portbox->range(1,65535);}
+    }
+    Fl_Light_Button plotbtn {
+      label Plot
+      callback {plot_cb();}
+      xywh {175 50 70 35}
+    }
+    Fl_Light_Button streambtn {
+      label Streaming
+      callback {streaming_cb();}
+      xywh {10 50 100 35}
+    }
+    Fl_Button singlebtn {
+      label Single
+      callback {single_cb()}
+      xywh {115 50 55 35}
+    }
+    Fl_Light_Button connectbtn {
+      label Connect
+      callback {connect_cb();}
+      xywh {255 50 85 35}
+    }
+    Fl_Button quitbt {
+      label Quit
+      callback {exit_cb();}
+      xywh {540 10 105 75}
+    }
+    Fl_Button savebtn {
+      label Save
+      callback {save_cb();}
+      xywh {455 50 70 35}
+    }
+    Fl_Button clearbtn {
+      label Clear
+      callback {clear_cb();}
+      xywh {370 50 75 35}
+    }
+    Fl_Button infobtn {
+      label About
+      callback {fl_message("flBird v.0.1 by Bartosz Bielawski 2008\\nThis program is a client to pcBIRD server written by T.Wlostowski. Both programs written for ISR course.");}
+      xywh {370 10 155 35}
+    }
+  }
+} 
