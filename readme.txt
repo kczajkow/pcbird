@@ -15,3 +15,8 @@ Tomasz Adamczyk,
 Bartosz Bielawski,
 Tomasz Włostowski.
 
+UWAGA (Piotr Trojanek):
+
+ladowanie modulu poleceniem (wg isr.pdf):
+
+# insmod ./pcbird_uio.ko port=0x400 irq=15
