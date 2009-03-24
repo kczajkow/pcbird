@@ -17,6 +17,7 @@ Tomasz Włostowski.
 
 UWAGA (Piotr Trojanek):
 
-ladowanie modulu poleceniem (wg isr.pdf):
+ladowanie modulu poleceniem (wg isr.pdf), w katalogu uio_driver/:
 
-# insmod ./pcbird_uio.ko port=0x400 irq=15
+# sudo insmod ./pcbird_uio.ko port=0x400 irq=15
+# sudo rmmod pcbird_uio
