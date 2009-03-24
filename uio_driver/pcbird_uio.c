@@ -78,7 +78,7 @@ static int __devinit isa_pcbird_probe(struct device *dev, unsigned int n)
 	if (uio_register_device(dev, info))
 		goto out_unmap;
 
-	printk(KERN_INFO "PCBird: probe done [port = 0x%x, irq = %d].\n", port[n], irq[n]);
+	printk(KERN_INFO "PCBird: probe done [port = 0x%lx, irq = %ld].\n", port[n], irq[n]);
 	dev_set_drvdata(dev, info);
 
 	disable_irq(irq[n]);
