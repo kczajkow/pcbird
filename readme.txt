@@ -22,6 +22,11 @@ ladowanie modulu poleceniem (wg isr.pdf), w katalogu uio_driver/:
 # sudo insmod ./pcbird_uio.ko port=0x400 irq=15
 # sudo rmmod pcbird_uio
 
+UWAGA 2 (Tomasz Kornuta):
 
-Domyslne ustawienia karty:
-Port=0x200 irq 9
+Obecnie ustawione ustawienia karty:
+Port=0x300 irq 5
+
+Ustawienia mozna znalezc w dokumentacji karty, ktora obecnie równiez jest w
+SVN.
+
