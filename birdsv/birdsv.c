@@ -46,7 +46,7 @@ int pos_queue_head = 0, pos_queue_tail = 0;
 pthread_mutex_t pos_queue_lock = PTHREAD_MUTEX_INITIALIZER;
 
 //irq15
-static uint16_t base_addr = 0x200;
+static uint16_t base_addr = 0x300;
 static uint16_t tcp_port = 12345;
 static int uio_fd;
 static struct pos_ang last_pos;
@@ -137,7 +137,7 @@ void *hw_thread_entry(void *dummy)
 	struct pos_ang p;
 	struct timezone tz = {0, 0};
 	int nr,t;
-	nr=read( uio_fd, &t, 4);
+	//nr=read( uio_fd, &t, 4);
 	
 	while (!(inw(base_addr+2)&2));
 	p.x = inw(base_addr);
