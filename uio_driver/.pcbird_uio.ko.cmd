@@ -1,1 +1,0 @@
-cmd_/home/mani.baktha/pcbird/trunk/uio_driver/pcbird_uio.ko := ld -r -m elf_i386  --build-id -o /home/mani.baktha/pcbird/trunk/uio_driver/pcbird_uio.ko /home/mani.baktha/pcbird/trunk/uio_driver/pcbird_uio.o /home/mani.baktha/pcbird/trunk/uio_driver/pcbird_uio.mod.o
